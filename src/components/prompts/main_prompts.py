@@ -1,0 +1,37 @@
+from src.components.prompts import (
+    MacPhysioNookal,
+    SpinecareClinic,
+    AdelaideHeelPain,
+    DovestonHealth,
+    FunctionalSoles,
+    CoreplusPrompt,
+    PhoneNumber,
+    NewMac,
+    GoHighLevelDemo,
+    ClinikoDemo,
+    ThreeLines
+)
+
+PROMPTS= {"AGENT_PROMPT_CLINIKO_SPINCARE": SpinecareClinic.AGENT_PROMPT_CLINIKO_SPINCARE,
+          "SPINECARE_CHIROPRACTIC": SpinecareClinic.SPINECARE_CHIROPRACTIC,
+          "AGENT_PROMPT_CLINIKO_ADELAIDE_HEEL_PAIN": AdelaideHeelPain.AGENT_PROMPT_CLINIKO_ADELAIDE_HEEL_PAIN,
+          "ADELAIDE_HEEL_PAIN" : AdelaideHeelPain.ADELAIDE_HEEL_PAIN,
+          "DOVESTON_HEALTH" : DovestonHealth.DOVESTON_HEALTH,
+          "AGENT_PROMPT_CLINIKO_DOVESTON" : DovestonHealth.AGENT_PROMPT_CLINIKO_DOVESTON,
+          "FUNCTIONAL_SOLES" : FunctionalSoles.FUNCTIONAL_SOLES,
+          "AGENT_PROMPT_CLINIKO_FUNCTIONAL_SOLES" : FunctionalSoles.AGENT_PROMPT_CLINIKO_FUNCTIONAL_SOLES,
+          "COREPLUS_CLINIC" : CoreplusPrompt.COREPLUS_CLINIC,
+          "AGENT_PROMPT_COREPLUS_CLINIC" : CoreplusPrompt.AGENT_PROMPT_COREPLUS_CLINIC,
+          "MAC_PHYSIO_TEST": NewMac.MAC,
+          "AGENT_PROMPT_NOOKAL_MAC": NewMac.MAC_NEW_PROMPT,
+          "PHONE_NUMBER": PhoneNumber.PHONE_NUMBER,
+          "AGENT_PROMPT_PHONE_NUMBER": PhoneNumber.AGENT_PROMPT_PHONE_NUMBER,
+          "GOHIGHLEVEL_DEMO": GoHighLevelDemo.GOHIGHLEVEL_DEMO,
+          "GOHIGHLEVEL_DEMO_BOOKING": GoHighLevelDemo.GOHIGHLEVEL_DEMO_BOOKING,
+          "CLINIKO_DEMO_CLINIC": ClinikoDemo.CLINIKO_DEMO_CLINIC,
+          "AGENT_PROMPT_CLINIKO_DEMO": ClinikoDemo.AGENT_PROMPT_CLINIKO_DEMO,
+          "THREE_LINES_SYSTEM": ThreeLines.THREE_LINES_SYSTEM_PROMPT,
+          "THREE_LINES_OPERATIONS": ThreeLines.THREE_LINES_OPERATIONS_PROMPT,
+          "OMAR_GREETING_EN": ThreeLines.OMAR_GREETING_EN,
+          "OMAR_GREETING_AR": ThreeLines.OMAR_GREETING_AR
+          }

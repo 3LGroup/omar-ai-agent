@@ -1,0 +1,55 @@
+services:
+  answerly:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: answerly-app
+    ports:
+      - "8080:8080"  # Adjust port based on your app.py configuration
+    environment:
+      # OpenAI Configuration
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      
+      # Environment
+      - ENV=${ENV:-PRODUCTION}
+      
+      # Cliniko API Keys (from your clinic data)
+      - CLINIKO_API_KEY=${CLINIKO_API_KEY}
+      
+      # Retell AI Configuration
+      - RETELL_API_KEY=${RETELL_API_KEY}
+      
+    
+    volumes:
+      # Mount logs directory
+      - ./logs:/app/logs
+      
+      # Mount .env file for local development (optional)
+      # - ./.env:/app/.env
+    
+    networks:
+      - answerly-network
+    
+    restart: unless-stopped
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  answerly-network:
+    driver: bridge
+
+volumes:
+  logs-data:
+    driver: local
+
